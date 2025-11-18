@@ -15,7 +15,7 @@ const Index = () => {
             <img
               src={mascot}
               alt="ChocoFarms Mascot"
-              className="w-64 h-auto md:w-80 lg:w-96 drop-shadow-2xl"
+              className="w-80 h-auto md:w-96 lg:w-[500px] drop-shadow-2xl"
             />
           </div>
 
