@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import mascot from "@/assets/chocofarms-mascot.png";
+import mascot from "@/assets/mascot.png";
 
 const Index = () => {
   const whatsappNumber = "919866812555";
