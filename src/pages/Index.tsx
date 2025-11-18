@@ -1,12 +1,34 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
 import mascot from "@/assets/chocofarms-mascot.png";
+import { removeBackground, loadImage } from "@/lib/background-removal";
 
 const Index = () => {
   const [email, setEmail] = useState("");
+  const [processedMascot, setProcessedMascot] = useState<string>(mascot);
+  const [isProcessing, setIsProcessing] = useState(true);
   const { toast } = useToast();
+
+  useEffect(() => {
+    const processImage = async () => {
+      try {
+        const response = await fetch(mascot);
+        const blob = await response.blob();
+        const img = await loadImage(blob);
+        const processedBlob = await removeBackground(img);
+        const url = URL.createObjectURL(processedBlob);
+        setProcessedMascot(url);
+        setIsProcessing(false);
+      } catch (error) {
+        console.error("Failed to process mascot:", error);
+        setIsProcessing(false);
+      }
+    };
+
+    processImage();
+  }, []);
 
   const handleNotify = (e: React.FormEvent) => {
     e.preventDefault();
@@ -27,9 +49,11 @@ const Index = () => {
           {/* Mascot */}
           <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
             <img
-              src={mascot}
+              src={processedMascot}
               alt="ChocoFarms Mascot"
-              className="w-64 h-auto md:w-80 lg:w-96 drop-shadow-2xl"
+              className={`w-64 h-auto md:w-80 lg:w-96 drop-shadow-2xl transition-opacity duration-300 ${
+                isProcessing ? "opacity-50" : "opacity-100"
+              }`}
             />
           </div>
 
