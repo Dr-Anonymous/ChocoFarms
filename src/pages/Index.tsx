@@ -1,23 +1,9 @@
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { useToast } from "@/hooks/use-toast";
 import mascot from "@/assets/chocofarms-mascot.png";
 
 const Index = () => {
-  const [email, setEmail] = useState("");
-  const { toast } = useToast();
-
-  const handleNotify = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (email) {
-      toast({
-        title: "Thanks for your interest!",
-        description: "We'll keep you updated on our journey.",
-      });
-      setEmail("");
-    }
-  };
+  const whatsappNumber = "919866812555";
+  const whatsappLink = `https://wa.me/${whatsappNumber}`;
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-background via-muted/30 to-background">
@@ -57,24 +43,16 @@ const Index = () => {
               </p>
             </div>
 
-            {/* Email Form */}
-            <form onSubmit={handleNotify} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-              <Input
-                type="email"
-                placeholder="your@email.com"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-                className="flex-1 bg-background/80"
-              />
-              <Button
-                type="submit"
-                size="lg"
-                className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold transition-all hover:scale-105"
-              >
+            {/* WhatsApp Button */}
+            <Button
+              asChild
+              size="lg"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold transition-all hover:scale-105"
+            >
+              <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
                 Notify Me
-              </Button>
-            </form>
+              </a>
+            </Button>
           </div>
 
           {/* Footer Hint */}
