@@ -9,18 +9,9 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-to-b from-background via-muted/30 to-background">
       {/* Hero Section */}
       <main className="container mx-auto px-4 py-12 md:py-20">
-        <div className="flex flex-col items-center text-center space-y-8 max-w-4xl mx-auto">
-          {/* Mascot */}
-          <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
-            <img
-              src={mascot}
-              alt="ChocoFarms Mascot"
-              className="w-80 h-auto md:w-96 lg:w-[500px] drop-shadow-2xl"
-            />
-          </div>
-
+        <div className="flex flex-col items-center text-center space-y-4 max-w-4xl mx-auto">
           {/* Headline */}
-          <div className="space-y-4 animate-in fade-in slide-in-from-bottom-5 duration-700 delay-150">
+          <div className="space-y-3 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground tracking-tight">
               Where Nature Meets
               <span className="block text-primary mt-2">Sweet Adventures</span>
@@ -29,6 +20,15 @@ const Index = () => {
               Imagine a place where cocoa trees whisper stories, where the earth
               feeds your soul, and every moment tastes like discovery...
             </p>
+          </div>
+
+          {/* Mascot */}
+          <div className="animate-in fade-in slide-in-from-bottom-5 duration-700 delay-150">
+            <img
+              src={mascot}
+              alt="ChocoFarms Mascot"
+              className="w-80 h-auto md:w-96 lg:w-[500px] drop-shadow-2xl"
+            />
           </div>
 
           {/* Mystery Box */}
