@@ -1,9 +1,8 @@
 import { Button } from "@/components/ui/button";
-import mascot from "@/assets/mascot.png";
+import mascot from "/mascot.png";
 
 const Index = () => {
-  const whatsappNumber = "919866812555";
-  const whatsappLink = `https://wa.me/${whatsappNumber}`;
+  const whatsappLink = `https://wa.me/919866812555`;
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-background via-muted/30 to-background">
