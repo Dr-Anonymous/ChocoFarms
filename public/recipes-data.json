@@ -1,0 +1,1098 @@
+[
+  {
+    "id": "farm-1791135328846-test",
+    "slug": "farm-1791135328846-test",
+    "title": {
+      "en": "test",
+      "te": "test"
+    },
+    "tagline": {
+      "en": "some",
+      "te": "so,e"
+    },
+    "description": {
+      "en": "story",
+      "te": "story"
+    },
+    "category": "sweets",
+    "categoryLabel": {
+      "en": "Sweet Treats",
+      "te": "తీపి వంటకాలు"
+    },
+    "difficulty": "easy",
+    "difficultyLabel": {
+      "en": "Easy",
+      "te": "సులభం"
+    },
+    "prepTimeMinutes": 10,
+    "cookTimeMinutes": 15,
+    "totalTimeMinutes": 25,
+    "baseServings": 4,
+    "servingUnit": {
+      "en": "servings",
+      "te": "మందికి"
+    },
+    "caloriesPerServing": 180,
+    "image": "/recipes/artisan-hot-cocoa.jpg",
+    "tags": {
+      "en": [
+        "Farm Crafted",
+        "Gluten-Free",
+        "Palm Jaggery"
+      ],
+      "te": [
+        "ఫామ్ స్పెషల్",
+        "గ్లూటెన్ రహితం",
+        "సేంద్రీయ బెల్లం"
+      ]
+    },
+    "cacaoProfile": {
+      "en": "Single-origin 70% dark farm cocoa",
+      "te": "స్వచ్ఛమైన ఫామ్ కోకో"
+    },
+    "mascotTip": {
+      "en": "Always use fresh ingredients and gentle heat for the richest chocolate aroma!",
+      "te": "మంచి చాక్లెట్ సువాసన కోసం సన్నని మంటపై వేడి చేయండి!"
+    },
+    "isVegan": false,
+    "isGlutenFree": true,
+    "isJaggerySweetened": true,
+    "ingredients": [
+      {
+        "id": "ing-1",
+        "amount": 50,
+        "unit": "g",
+        "name": {
+          "en": "Farm Cocoa Powder",
+          "te": "ఫామ్ కోకో పౌడర్"
+        }
+      },
+      {
+        "id": "ing-2",
+        "amount": 100,
+        "unit": "g",
+        "name": {
+          "en": "Organic Palm Jaggery",
+          "te": "సేంద్రీయ తాటి బెల్లం"
+        },
+        "note": {
+          "en": "powdered",
+          "te": "powdered"
+        }
+      }
+    ],
+    "steps": [
+      {
+        "stepNumber": 1,
+        "instruction": {
+          "en": "Whisk the dry cocoa powder and powdered jaggery together until thoroughly blended.",
+          "te": "కోకో పౌడర్ మరియు బెల్లం పొడిని సమానంగా కలపండి."
+        },
+        "durationMinutes": 2,
+        "tip": {
+          "en": "Sift first to avoid lumps",
+          "te": "Sift first to avoid lumps"
+        }
+      },
+      {
+        "stepNumber": 2,
+        "instruction": {
+          "en": "Gently fold in wet ingredients on low heat until glossy and fragrant.",
+          "te": "సన్నని మంటపై ఇతర పదార్థాలు కలిపి మెత్తగా అయ్యే వరకు తిప్పండి."
+        },
+        "durationMinutes": 5
+      }
+    ]
+  },
+  {
+    "id": "artisan-spiced-hot-cocoa",
+    "slug": "artisan-spiced-hot-cocoa",
+    "title": {
+      "en": "Artisan Spiced Hot Cocoa",
+      "te": "మసాలా హాట్ కోకో"
+    },
+    "tagline": {
+      "en": "Velvety farm cacao simmered with green cardamom, Ceylon cinnamon & toasted marshmallows",
+      "te": "యాలకులు, దాల్చిన చెక్క, తాటి బెల్లం మరియు కాల్చిన మార్ష్‌మల్లోలతో చేసిన ఘుమఘుమలాడే హాట్ చాక్లెట్"
+    },
+    "description": {
+      "en": "A warm and soul-soothing farmstead favorite. Pure unsweetened single-origin cocoa powder and 70% dark chocolate are gently coaxed into hot farm milk with crushed green cardamom, cinnamon bark, and unrefined palm jaggery, topped with toasted marshmallows.",
+      "te": "మా కోకో తోటలలో చలివేళ తాగే ప్రియమైన పానీయం. స్వచ్ఛమైన కోకో పౌడర్, 70% డార్క్ చాక్లెట్, దేశీ పాలు, యాలకులు, దాల్చిన చెక్క మరియు సేంద్రీయ తాటి బెల్లం కలిపి తయారుచేసిన అమృతం."
+    },
+    "category": "drinks",
+    "categoryLabel": {
+      "en": "Farm Drinks",
+      "te": "ఫామ్ పానీయాలు"
+    },
+    "difficulty": "easy",
+    "difficultyLabel": {
+      "en": "Easy",
+      "te": "సులభం"
+    },
+    "prepTimeMinutes": 5,
+    "cookTimeMinutes": 7,
+    "totalTimeMinutes": 12,
+    "baseServings": 2,
+    "servingUnit": {
+      "en": "mugs",
+      "te": "కప్పులు"
+    },
+    "caloriesPerServing": 210,
+    "image": "/recipes/artisan-hot-cocoa.jpg",
+    "tags": {
+      "en": [
+        "Gluten-Free",
+        "Warm Hug",
+        "Kid-Friendly",
+        "Palm Jaggery"
+      ],
+      "te": [
+        "గ్లూటెన్ రహితం",
+        "వెచ్చని పానీయం",
+        "పిల్లలకి ఇష్టం",
+        "తాటి బెల్లం"
+      ]
+    },
+    "cacaoProfile": {
+      "en": "Single-origin 70% dark farm cocoa with notes of warm spice and earthy honey",
+      "te": "సింగిల్-ఆరిజిన్ 70% డార్క్ ఫామ్ కోకో, తేనె మరియు మసాలా సువాసనలతో"
+    },
+    "mascotTip": {
+      "en": "Whisk vigorously in a figure-eight motion for 30 seconds right before pouring to get an airy cocoa crema!",
+      "te": "పోసే ముందు 30 సెకన్ల పాటు బాగా గిలకొట్టండి, పైన మంచి చాక్లెట్ నురుగు వస్తుంది!"
+    },
+    "isVegan": false,
+    "isGlutenFree": true,
+    "isJaggerySweetened": true,
+    "ingredients": [
+      {
+        "id": "cocoa-pwd",
+        "amount": 40,
+        "unit": "g",
+        "name": {
+          "en": "Unsweetened Farm Cocoa Powder",
+          "te": "స్వచ్ఛమైన ఫామ్ కోకో పౌడర్"
+        },
+        "note": {
+          "en": "approx. 3 level tbsp",
+          "te": "సుమారు 3 టేబుల్ స్పూన్లు"
+        }
+      },
+      {
+        "id": "milk",
+        "amount": 500,
+        "unit": "ml",
+        "name": {
+          "en": "Whole Farm Milk (or Oat Milk)",
+          "te": "పాలు (లేదా ఓట్ మిల్క్)"
+        }
+      },
+      {
+        "id": "dark-choc",
+        "amount": 30,
+        "unit": "g",
+        "name": {
+          "en": "70% Dark Farm Chocolate",
+          "te": "70% డార్క్ చాక్లెట్ ముక్కలు"
+        },
+        "note": {
+          "en": "finely chopped",
+          "te": "చిన్నగా తరిగినవి"
+        }
+      },
+      {
+        "id": "jaggery",
+        "amount": 35,
+        "unit": "g",
+        "name": {
+          "en": "Organic Palm Jaggery",
+          "te": "సేంద్రీయ తాటి బెల్లం పొడి"
+        }
+      },
+      {
+        "id": "cardamom",
+        "amount": 3,
+        "unit": "pods",
+        "name": {
+          "en": "Green Cardamom pods",
+          "te": "యాలకులు"
+        },
+        "note": {
+          "en": "lightly crushed",
+          "te": "దంచినవి"
+        }
+      },
+      {
+        "id": "cinnamon",
+        "amount": 1,
+        "unit": "stick",
+        "name": {
+          "en": "Ceylon Cinnamon stick",
+          "te": "దాల్చిన చెక్క"
+        }
+      },
+      {
+        "id": "marshmallows",
+        "amount": 4,
+        "unit": "pieces",
+        "name": {
+          "en": "Toasted Marshmallows",
+          "te": "మార్ష్‌మల్లోలు"
+        },
+        "note": {
+          "en": "optional topping",
+          "te": "ఆప్షనల్ గార్నిష్"
+        }
+      }
+    ],
+    "steps": [
+      {
+        "stepNumber": 1,
+        "instruction": {
+          "en": "In a small heavy-bottom saucepan, whisk 40g of cocoa powder with 100ml of cold milk over gentle low heat until a glossy, lump-free paste forms.",
+          "te": "చిన్న గిన్నెలో 40గ్రా కోకో పౌడర్ మరియు 100మిల్లీ చల్లని పాలు వేసి సన్నని మంటపై ఉండలు లేకుండా మెత్తని పేస్ట్‌లా కలపండి."
+        },
+        "durationMinutes": 2,
+        "tip": {
+          "en": "Dissolving cocoa in cold liquid first stops clumps completely!",
+          "te": "కోకోను మొదట కొద్దిగా చల్లని పాలతో కలిపితే ఉండలు కట్టదు!"
+        }
+      },
+      {
+        "stepNumber": 2,
+        "instruction": {
+          "en": "Pour in the remaining 400ml milk, drop in the crushed cardamom pods and cinnamon stick. Simmer gently over medium-low heat without letting it boil over.",
+          "te": "మిగిలిన 400మిల్లీ పాలు, దంచిన యాలకులు మరియు దాల్చిన చెక్క వేసి మరిగించకుండా సన్నని మంటపై వేడి చేయండి."
+        },
+        "durationMinutes": 3
+      },
+      {
+        "stepNumber": 3,
+        "instruction": {
+          "en": "Stir in chopped dark chocolate and powdered palm jaggery. Whisk steadily for 2 minutes until chocolate melts into a glossy, velvety nectar.",
+          "te": "తరిగిన డార్క్ చాక్లెట్ మరియు తాటి బెల్లం పొడి వేయండి. చాక్లెట్ కరిగి చిక్కబడే వరకు 2 నిమిషాలు కలపండి."
+        },
+        "durationMinutes": 2
+      },
+      {
+        "stepNumber": 4,
+        "instruction": {
+          "en": "Strain into pre-warmed mugs to catch the spices. Crown with marshmallows, toast with a kitchen torch or under broiler, and dust with fresh cocoa nibs.",
+          "te": "మసాలా దినుసులు పక్కకు తీసి కప్పుల్లోకి వడకట్టండి. పైన మార్ష్‌మల్లోలు ఉంచి తేలికగా వేడి చేసి, కోకో నిబ్స్ చల్లి ఆస్వాదించండి!"
+        }
+      }
+    ]
+  },
+  {
+    "id": "cocoa-sunnundalu",
+    "slug": "cocoa-sunnundalu",
+    "title": {
+      "en": "Farm Cocoa Sunnundalu",
+      "te": "చాక్లెట్ సున్నుండలు"
+    },
+    "tagline": {
+      "en": "The legendary Andhra roasted urad dal & ghee festive sweet reinvented with rich cocoa and nibs",
+      "te": "ఆంధ్రా సంప్రదాయ సున్నుండలకి స్వచ్ఛమైన కోకో మరియు కరకరలాడే నిబ్స్ సరికొత్త కలయిక"
+    },
+    "description": {
+      "en": "Sunnundalu is the pride of Andhra Pradesh festive kitchens. We roast whole urad dal to an aromatic nutty pink, grind it into a sandy texture, and blend with single-origin farm cocoa, golden desi cow ghee, unrefined organic jaggery, and crushed crunchy cocoa nibs.",
+      "te": "తెలుగు వారి పండుగ స్పెషల్ సున్నుండలు! మినపప్పును బంగారు రంగులో గుమగుమలాడేలా వేయించి, సేంద్రీయ బెల్లం, కమ్మని ఆవు నెయ్యి, కోకో పౌడర్ మరియు కరకరలాడే కోకో నిబ్స్ కలిపి చేసే అద్భుతమైన ఆరోగ్యకరమైన మిఠాయి."
+    },
+    "category": "sweets",
+    "categoryLabel": {
+      "en": "Sweet Treats",
+      "te": "తీపి వంటకాలు"
+    },
+    "difficulty": "medium",
+    "difficultyLabel": {
+      "en": "Medium",
+      "te": "మధ్యస్థం"
+    },
+    "prepTimeMinutes": 15,
+    "cookTimeMinutes": 20,
+    "totalTimeMinutes": 35,
+    "baseServings": 12,
+    "servingUnit": {
+      "en": "ladoos",
+      "te": "సున్నుండలు"
+    },
+    "caloriesPerServing": 165,
+    "image": "/recipes/cocoa-sunnundalu.jpg",
+    "tags": {
+      "en": [
+        "Andhra Heritage",
+        "Protein-Packed",
+        "Traditional Ghee",
+        "Gluten-Free"
+      ],
+      "te": [
+        "ఆంధ్రా సంప్రదాయం",
+        "ప్రోటీన్ పుష్కలం",
+        "దేశీ నెయ్యి",
+        "గ్లూటెన్ రహితం"
+      ]
+    },
+    "cacaoProfile": {
+      "en": "Rich earthy dark cacao balanced with nutty roasted pulses and caramelized jaggery",
+      "te": "వేయించిన మినపప్పు మరియు కమ్మని బెల్లంతో కలిసిన స్వచ్ఛమైన డార్క్ కోకో రుచి"
+    },
+    "mascotTip": {
+      "en": "Slow roasting the urad dal on low heat is non-negotiable! Look for a faint pink-golden color and warm toasted aroma.",
+      "te": "మినపప్పును సన్నని సెగపై కనీసం 15 నిమిషాలు వేయించాలి. సువాసన వచ్చి గులాబీ రంగులోకి మారడమే అసలు కిటుకు!"
+    },
+    "isVegan": false,
+    "isGlutenFree": true,
+    "isJaggerySweetened": true,
+    "ingredients": [
+      {
+        "id": "urad-dal",
+        "amount": 250,
+        "unit": "g",
+        "name": {
+          "en": "Whole White Urad Dal (Minapa Gundlu)",
+          "te": "మినప గుండ్లు"
+        }
+      },
+      {
+        "id": "jaggery-sunnundalu",
+        "amount": 200,
+        "unit": "g",
+        "name": {
+          "en": "Organic Bellam (Jaggery Powder)",
+          "te": "సేంద్రీయ బెల్లం పొడి"
+        }
+      },
+      {
+        "id": "desi-ghee",
+        "amount": 150,
+        "unit": "ml",
+        "name": {
+          "en": "Pure Desi Cow Ghee",
+          "te": "స్వచ్ఛమైన ఆవు నెయ్యి (గోరువెచ్చనిది)"
+        }
+      },
+      {
+        "id": "cacao-powder",
+        "amount": 40,
+        "unit": "g",
+        "name": {
+          "en": "Farm Cacao Powder",
+          "te": "ఫామ్ కోకో పౌడర్"
+        }
+      },
+      {
+        "id": "cacao-nibs",
+        "amount": 30,
+        "unit": "g",
+        "name": {
+          "en": "Roasted Cacao Nibs",
+          "te": "వేయించిన కోకో నిబ్స్ (క్రంచ్ కోసం)"
+        }
+      },
+      {
+        "id": "cardamom-pwd",
+        "amount": 1,
+        "unit": "tsp",
+        "name": {
+          "en": "Green Cardamom Powder",
+          "te": "యాలకుల పొడి"
+        }
+      },
+      {
+        "id": "pista-rose",
+        "amount": 2,
+        "unit": "tbsp",
+        "name": {
+          "en": "Crushed Pistachios & Edible Rose Petals",
+          "te": "పిస్తా పప్పులు & గులాబీ రేకులు"
+        },
+        "note": {
+          "en": "for rolling & garnish",
+          "te": "గార్నిష్ కోసం"
+        }
+      }
+    ],
+    "steps": [
+      {
+        "stepNumber": 1,
+        "instruction": {
+          "en": "Heat a heavy kadai on low-medium flame. Dry roast urad dal continuously for 12-15 minutes until it turns light golden-pink and releases a deeply nutty aroma. Cool completely.",
+          "te": "మందపాటి కడాయిలో మినపప్పు వేసి సన్నని మంటపై 12-15 నిమిషాలు వేయించండి. మంచి సువాసన వచ్చి దోరగా వేగాక గిన్నెలోకి తీసుకుని చల్లారనివ్వండి."
+        },
+        "durationMinutes": 15,
+        "tip": {
+          "en": "Do not roast on high heat, or the outer surface burns while inside remains raw.",
+          "te": "పెద్ద మంట పెట్టకండి, లోపల పచ్చిగా ఉండిపోతుంది."
+        }
+      },
+      {
+        "stepNumber": 2,
+        "instruction": {
+          "en": "Transfer cooled roasted dal to a mixer grinder. Grind into a slightly coarse, sandy flour (rawa consistency).",
+          "te": "చల్లారిన మినపప్పును మిక్సీ జార్‌లో వేసి రవ్వ రవ్వగా పొడి చేసుకోండి."
+        },
+        "durationMinutes": 2
+      },
+      {
+        "stepNumber": 3,
+        "instruction": {
+          "en": "Add powdered jaggery, cacao powder, and cardamom powder to the dal flour in the jar. Pulse 3-4 times for 10 seconds each to homogenize thoroughly.",
+          "te": "అందులోనే బెల్లం పొడి, కోకో పౌడర్, యాలకుల పొడి వేసి సమానంగా కలిసేలా 30 సెకన్లు పల్స్ చేయండి."
+        }
+      },
+      {
+        "stepNumber": 4,
+        "instruction": {
+          "en": "Pour the mixture into a wide mixing bowl. Fold in crunchy roasted cacao nibs. Gradually drizzle warm melted ghee while kneading with hands into a moist, shapeable dough.",
+          "te": "మిశ్రమాన్ని వెడల్పాటి బౌల్‌లోకి తీసి, కోకో నిబ్స్ కలపండి. గోరువెచ్చని నెయ్యి కొద్దికొద్దిగా పోస్తూ చేతితో బాగా కలపండి."
+        },
+        "durationMinutes": 3
+      },
+      {
+        "stepNumber": 5,
+        "instruction": {
+          "en": "Tightly press portions into firm, smooth round balls. Roll gently over crushed pistachios and rose petals. Store in an airtight brass tin for up to 3 weeks!",
+          "te": "మిశ్రమాన్ని గుండ్రటి లడ్డూల్లా గట్టిగా చుట్టండి. పిస్తా, గులాబీ రేకుల్లో దొర్లించి భద్రపరచుకోండి. 3 వారాలు నిల్వ ఉంటాయి!"
+        }
+      }
+    ]
+  },
+  {
+    "id": "cacao-pulp-smoothie",
+    "slug": "cacao-pulp-smoothie",
+    "title": {
+      "en": "Farm Fresh Cacao Pulp Smoothie",
+      "te": "తాజా కోకో పల్ప్ స్మూతీ"
+    },
+    "tagline": {
+      "en": "Exotic white cacao fruit pulp blended with tender coconut water, pineapple and raw honey",
+      "te": "తాజా కోకో పండు గుజ్జు, కొబ్బరి నీళ్లు, అనాస పండు మరియు అడవి తేనెతో చేసిన అమృతం"
+    },
+    "description": {
+      "en": "Few people know that the cacao pod contains a luscious, tropical white fruit pulp enveloping the seeds! It has a sublime tart-sweet taste reminiscent of lychee, mangosteen, and sweet pear. We blend it with tender farm coconut water for the ultimate tropical refresher.",
+      "te": "కోకో గింజల చుట్టూ ఉండే తెల్లటి గుజ్జు అమృతంలా ఉంటుంది! లిచీ, మామిడి కలగలిపిన పుల్లటి-తియ్యటి సహజ రుచి. దీనిని తాజా కొబ్బరి నీళ్లు మరియు అడవి తేనెతో కలిపి చేసే సహజమైన ఎనర్జీ డ్రింక్."
+    },
+    "category": "healthy",
+    "categoryLabel": {
+      "en": "Healthy & Fresh",
+      "te": "ఆరోగ్యకరమైనవి"
+    },
+    "difficulty": "easy",
+    "difficultyLabel": {
+      "en": "Easy",
+      "te": "సులభం"
+    },
+    "prepTimeMinutes": 8,
+    "cookTimeMinutes": 0,
+    "totalTimeMinutes": 8,
+    "baseServings": 2,
+    "servingUnit": {
+      "en": "glasses",
+      "te": "గ్లాసులు"
+    },
+    "caloriesPerServing": 140,
+    "image": "/recipes/cacao-pulp-smoothie.jpg",
+    "tags": {
+      "en": [
+        "Vegan",
+        "Superfood",
+        "Zero Cook",
+        "Electrolyte Rich"
+      ],
+      "te": [
+        "వీగన్",
+        "సూపర్‌ఫుడ్",
+        "వంట అక్కర్లేదు",
+        "శక్తిదాయకం"
+      ]
+    },
+    "cacaoProfile": {
+      "en": "Zesty, floral tropical cacao fruit pulp bursting with natural antioxidants and vitamin C",
+      "te": "విటమిన్ సి మరియు యాంటీఆక్సిడెంట్లతో నిండిన సహజమైన ఉష్ణమండల కోకో పండు గుజ్జు"
+    },
+    "mascotTip": {
+      "en": "Keep your coconut water chilled in the fridge before blending so no excess ice is needed to dilute the delicate lychee flavors!",
+      "te": "కొబ్బరి నీళ్లను ముందే ఫ్రిజ్‌లో ఉంచి చల్లబరచండి, ఎక్కువ ఐస్ వేయకుండా పండ్ల సహజ రుచిని ఆస్వాదించవచ్చు!"
+    },
+    "isVegan": true,
+    "isGlutenFree": true,
+    "isJaggerySweetened": false,
+    "ingredients": [
+      {
+        "id": "cacao-pulp",
+        "amount": 150,
+        "unit": "g",
+        "name": {
+          "en": "Fresh White Cacao Fruit Pulp",
+          "te": "తాజా కోకో పండు తెల్లటి గుజ్జు"
+        },
+        "note": {
+          "en": "scooped from fresh pod or chilled pulp",
+          "te": "కోకో కాయ నుండి తీసిన గుజ్జు"
+        }
+      },
+      {
+        "id": "coconut-water",
+        "amount": 250,
+        "unit": "ml",
+        "name": {
+          "en": "Fresh Tender Coconut Water",
+          "te": "లేత కొబ్బరి నీళ్లు"
+        }
+      },
+      {
+        "id": "pineapple",
+        "amount": 80,
+        "unit": "g",
+        "name": {
+          "en": "Chilled Sweet Pineapple Chunks",
+          "te": "అనాస పండు ముక్కలు"
+        }
+      },
+      {
+        "id": "honey",
+        "amount": 1.5,
+        "unit": "tbsp",
+        "name": {
+          "en": "Wild Forest Honey (or Agave for Vegan)",
+          "te": "తేనె (లేదా ఆర్గానిక్ బెల్లం సిరప్)"
+        }
+      },
+      {
+        "id": "mint",
+        "amount": 2,
+        "unit": "sprigs",
+        "name": {
+          "en": "Fresh Garden Mint",
+          "te": "పుదీనా ఆకులు"
+        }
+      },
+      {
+        "id": "crushed-ice",
+        "amount": 5,
+        "unit": "cubes",
+        "name": {
+          "en": "Crushed Ice",
+          "te": "ఐస్ ముక్కలు"
+        }
+      }
+    ],
+    "steps": [
+      {
+        "stepNumber": 1,
+        "instruction": {
+          "en": "Carefully crack open a fresh ripe cacao pod and gently scrape the white glistening fruit pulp away from the seeds into a high-speed blender bowl.",
+          "te": "కోకో కాయను పగులగొట్టి, లోపలి గింజల చుట్టూ ఉన్న తెల్లటి గుజ్జును జాగ్రత్తగా బ్లెండర్ జార్‌లోకి వేయండి."
+        }
+      },
+      {
+        "stepNumber": 2,
+        "instruction": {
+          "en": "Pour in chilled tender coconut water, sweet ripe pineapple pieces, a few mint leaves, and wild honey.",
+          "te": "చల్లని కొబ్బరి నీళ్లు, అనాస పండు ముక్కలు, కొద్దిగా పుదీనా మరియు తేనె కలపండి."
+        }
+      },
+      {
+        "stepNumber": 3,
+        "instruction": {
+          "en": "Blend on high speed for 45-60 seconds until frothy, velvety, and micro-aerated.",
+          "te": "అన్నింటిని మిక్సీలో 45 సెకన్ల పాటు నురుగు వచ్చేలా మెత్తగా బ్లెండ్ చేయండి."
+        },
+        "durationMinutes": 1
+      },
+      {
+        "stepNumber": 4,
+        "instruction": {
+          "en": "Fill two tall glasses with crushed ice, pour the chilled tropical nectar, crown with fresh mint, and drink immediately under the morning sunshine!",
+          "te": "గ్లాసులో ఐస్ వేసి, ఈ పానీయాన్ని పోసి, పుదీనాతో అలంకరించి వెంటనే తాగేయండి!"
+        }
+      }
+    ]
+  },
+  {
+    "id": "jaggery-lava-cake",
+    "slug": "jaggery-lava-cake",
+    "title": {
+      "en": "Jaggery Dark Chocolate Lava Cake",
+      "te": "బెల్లం చాక్లెట్ లావా కేక్"
+    },
+    "tagline": {
+      "en": "Warm molten dark chocolate center sweetened with Andhra palm jaggery & Himalayan salt",
+      "te": "కట్ చేయగానే జాలువారే తియ్యనైన చాక్లెట్ లావా... స్వచ్ఛమైన సేంద్రీయ తాటి బెల్లంతో"
+    },
+    "description": {
+      "en": "An extraordinary indulgence with zero refined sugar. We marry our rich 75% estate dark chocolate with traditional unrefined Andhra palm jaggery and grass-fed butter. Cut with a spoon to reveal an irresistible river of molten chocolate.",
+      "te": "ఎలాంటి వైట్ షుగర్ లేకుండా చేసిన విలాసవంతమైన డెజర్ట్. 75% డార్క్ చాక్లెట్ మరియు ఆర్గానిక్ బెల్లంతో బేక్ చేసిన వేడి వేడి కేక్... స్పూన్‌తో తాకగానే చాక్లెట్ లావా ప్రవహిస్తుంది."
+    },
+    "category": "fusion",
+    "categoryLabel": {
+      "en": "Fusion Desserts",
+      "te": "ఫ్యూజన్ డెజర్ట్‌లు"
+    },
+    "difficulty": "medium",
+    "difficultyLabel": {
+      "en": "Medium",
+      "te": "మధ్యస్థం"
+    },
+    "prepTimeMinutes": 15,
+    "cookTimeMinutes": 11,
+    "totalTimeMinutes": 26,
+    "baseServings": 4,
+    "servingUnit": {
+      "en": "cakes",
+      "te": "కేకులు"
+    },
+    "caloriesPerServing": 285,
+    "image": "/recipes/jaggery-lava-cake.jpg",
+    "tags": {
+      "en": [
+        "Refined-Sugar Free",
+        "Molten Lava",
+        "Celebration",
+        "Palm Jaggery"
+      ],
+      "te": [
+        "షుగర్ ఫ్రీ బెల్లం",
+        "లావా కేక్",
+        "పండుగ స్పెషల్",
+        "తాటి బెల్లం"
+      ]
+    },
+    "cacaoProfile": {
+      "en": "Deep 75% single-origin cacao with molasses richness, fruit notes, and buttery finish",
+      "te": "75% డార్క్ కోకో మరియు బెల్లం పాకం సమ్మేళనం"
+    },
+    "mascotTip": {
+      "en": "Bake at 200°C for exactly 11 minutes. The perimeter should be springy while the direct center still jiggles lightly when shaken!",
+      "te": "200 డిగ్రీల వద్ద ఖచ్చితంగా 11 నిమిషాలు బేక్ చేయండి. కేక్ అంచులు గట్టిగా ఉండి, మధ్యలో కదులుతుంటే లావా పర్ఫెక్ట్ గా వస్తుంది!"
+    },
+    "isVegan": false,
+    "isGlutenFree": false,
+    "isJaggerySweetened": true,
+    "ingredients": [
+      {
+        "id": "choc-lava",
+        "amount": 140,
+        "unit": "g",
+        "name": {
+          "en": "75% Farm Dark Chocolate",
+          "te": "75% డార్క్ చాక్లెట్ ముక్కలు"
+        },
+        "note": {
+          "en": "chopped into small shards",
+          "te": "సన్నగా తరిగినవి"
+        }
+      },
+      {
+        "id": "butter-lava",
+        "amount": 80,
+        "unit": "g",
+        "name": {
+          "en": "Unsalted Butter",
+          "te": "వెన్న"
+        }
+      },
+      {
+        "id": "jaggery-lava",
+        "amount": 90,
+        "unit": "g",
+        "name": {
+          "en": "Organic Andhra Jaggery Powder",
+          "te": "సేంద్రీయ బెల్లం పొడి"
+        }
+      },
+      {
+        "id": "eggs-lava",
+        "amount": 2,
+        "unit": "whole",
+        "name": {
+          "en": "Large Free-Range Eggs",
+          "te": "కోడిగుడ్లు"
+        }
+      },
+      {
+        "id": "egg-yolks",
+        "amount": 2,
+        "unit": "yolks",
+        "name": {
+          "en": "Egg Yolks",
+          "te": "గుడ్డు పచ్చసొనలు"
+        }
+      },
+      {
+        "id": "flour-lava",
+        "amount": 35,
+        "unit": "g",
+        "name": {
+          "en": "Whole Wheat or All-Purpose Flour",
+          "te": "మైదా లేదా గోధుమ పిండి"
+        }
+      },
+      {
+        "id": "pink-salt",
+        "amount": 0.25,
+        "unit": "tsp",
+        "name": {
+          "en": "Himalayan Pink Salt",
+          "te": "సైంధవ లవణం (ఉప్పు)"
+        }
+      }
+    ],
+    "steps": [
+      {
+        "stepNumber": 1,
+        "instruction": {
+          "en": "Preheat oven to 200°C (395°F). Butter 4 ramekins thoroughly and dust their interior with cocoa powder, tapping out any excess.",
+          "te": "ఓవెన్‌ను 200°C వద్ద ప్రీ-హీట్ చేయండి. 4 బేకింగ్ కప్పులకు వెన్న రాసి, కొద్దిగా కోకో పౌడర్ చల్లి సిద్ధం చేసుకోండి."
+        }
+      },
+      {
+        "stepNumber": 2,
+        "instruction": {
+          "en": "Melt chopped dark chocolate and butter together in a heatproof glass bowl set over gently simmering water (bain-marie). Stir till velvety smooth, then let cool 3 minutes.",
+          "te": "డబుల్ బాయిలర్ విధానంలో డార్క్ చాక్లెట్ మరియు వెన్నను కలిపి కరిగించండి. మెత్తగా కరిగాక 3 నిమిషాలు పక్కన పెట్టండి."
+        },
+        "durationMinutes": 4
+      },
+      {
+        "stepNumber": 3,
+        "instruction": {
+          "en": "In a separate bowl, whisk whole eggs, egg yolks, and powdered jaggery on high speed for 3-4 minutes until thick, pale, and foamy.",
+          "te": "మరొక గిన్నెలో గుడ్లు, పచ్చసొనలు మరియు బెల్లం పొడి వేసి 3 నిమిషాలు నురుగు వచ్చేలా విస్క్ చేయండి."
+        },
+        "durationMinutes": 3
+      },
+      {
+        "stepNumber": 4,
+        "instruction": {
+          "en": "Gently fold melted chocolate into the egg mixture. Sift in flour and salt, folding with a spatula until just united. Divide evenly between prepared ramekins.",
+          "te": "కరిగించిన చాక్లెట్ మిశ్రమాన్ని గుడ్డు మిశ్రమంలో కలపండి. పిండి, ఉప్పు జల్లించి మృదువుగా కలపండి. బేకింగ్ కప్పుల్లో సమానంగా పోయండి."
+        }
+      },
+      {
+        "stepNumber": 5,
+        "instruction": {
+          "en": "Bake on the middle oven rack for precisely 10 to 11 minutes. Rest 1 minute, gently invert onto dessert plates, dust with jaggery powdered sugar, and plunge your spoon!",
+          "te": "ఓవెన్‌లో ఖచ్చితంగా 10 నుండి 11 నిమిషాలు బేక్ చేయండి. 1 నిమిషం ఆగి, ప్లేట్‌లోకి తిరగేసి, వేడి వేడిగా చాక్లెట్ లావాను ఆస్వాదించండి!"
+        },
+        "durationMinutes": 11
+      }
+    ]
+  },
+  {
+    "id": "choco-filter-coffee",
+    "slug": "choco-filter-coffee",
+    "title": {
+      "en": "Cardamom Choco Filter Coffee",
+      "te": "ఎలకుల చాక్లెట్ ఫిల్టర్ కాఫీ"
+    },
+    "tagline": {
+      "en": "Traditional South Indian brass filter coffee fused with molten dark chocolate and frothy milk",
+      "te": "సాంప్రదాయ దక్షిణ భారత ఫిల్టర్ కాఫీకి కరిగించిన డార్క్ చాక్లెట్ మరియు యాలకుల సువాసన"
+    },
+    "description": {
+      "en": "When the ritual of South Indian morning coffee meets our artisanal cocoa grove. Intense chicory-kissed coffee decoction is blended with 70% melted dark chocolate, fresh crushed green cardamom, and aerated hot buffalo milk, served Meter-style in authentic brass ware.",
+      "te": "ఉదయాన్నే వేడి వేడి ఫిల్టర్ కాఫీ తాగే అనుభూతి... దానికి చాక్లెట్ తోడైతే? ఘాటైన కాఫీ డికాక్షన్, కరిగించిన డార్క్ చాక్లెట్, యాలకుల పొడి మరియు మీటర్ స్టైల్ నురుగుతో కూడిన అమృతం."
+    },
+    "category": "drinks",
+    "categoryLabel": {
+      "en": "Farm Drinks",
+      "te": "ఫామ్ పానీయాలు"
+    },
+    "difficulty": "easy",
+    "difficultyLabel": {
+      "en": "Easy",
+      "te": "సులభం"
+    },
+    "prepTimeMinutes": 5,
+    "cookTimeMinutes": 5,
+    "totalTimeMinutes": 10,
+    "baseServings": 2,
+    "servingUnit": {
+      "en": "tumblers",
+      "te": "డంబ్లర్లు"
+    },
+    "caloriesPerServing": 160,
+    "image": "/recipes/choco-filter-coffee.jpg",
+    "tags": {
+      "en": [
+        "South Indian Heritage",
+        "Morning Ritual",
+        "Frothy",
+        "Cardamom Spiced"
+      ],
+      "te": [
+        "దక్షిణ భారత స్పెషల్",
+        "ఉదయపు కాఫీ",
+        "నురుగు",
+        "యాలకుల సువాసన"
+      ]
+    },
+    "cacaoProfile": {
+      "en": "Earthy cocoa tones blending harmoniously with roasted Arabica coffee oils",
+      "te": "ఘుమఘుమలాడే కాఫీ గింజలు మరియు డార్క్ కోకో కలయిక"
+    },
+    "mascotTip": {
+      "en": "Pour the coffee between tumbler and dabarah from shoulder height three times to create that iconic micro-foam head!",
+      "te": "డంబ్లర్ మరియు దబరా మధ్య మూడుసార్లు పైకెత్తి పోయండి (మీటర్ కాఫీ లాగా), దట్టమైన నురుగు వస్తుంది!"
+    },
+    "isVegan": false,
+    "isGlutenFree": true,
+    "isJaggerySweetened": true,
+    "ingredients": [
+      {
+        "id": "decoction",
+        "amount": 60,
+        "unit": "ml",
+        "name": {
+          "en": "Fresh Filter Coffee Decoction",
+          "te": "తాజా ఫిల్టర్ కాఫీ డికాక్షన్"
+        },
+        "note": {
+          "en": "first-press strong brew",
+          "te": "చిక్కటి మొదటి ప్రెస్"
+        }
+      },
+      {
+        "id": "milk-coffee",
+        "amount": 300,
+        "unit": "ml",
+        "name": {
+          "en": "Full Cream Farm Milk",
+          "te": "చిక్కటి పాలు"
+        }
+      },
+      {
+        "id": "dark-choc-coffee",
+        "amount": 40,
+        "unit": "g",
+        "name": {
+          "en": "70% Dark Farm Chocolate",
+          "te": "70% డార్క్ చాక్లెట్ (తురిమినది)"
+        }
+      },
+      {
+        "id": "jaggery-coffee",
+        "amount": 1,
+        "unit": "tbsp",
+        "name": {
+          "en": "Organic Country Jaggery or Brown Sugar",
+          "te": "సేంద్రీయ బెల్లం లేదా నాటు చక్కెర"
+        }
+      },
+      {
+        "id": "elaichi-coffee",
+        "amount": 0.5,
+        "unit": "tsp",
+        "name": {
+          "en": "Freshly Ground Green Cardamom",
+          "te": "తాజా యాలకుల పొడి"
+        }
+      },
+      {
+        "id": "cocoa-dust",
+        "amount": 1,
+        "unit": "tsp",
+        "name": {
+          "en": "Cocoa Powder for Dusting",
+          "te": "పైన చల్లడానికి కోకో పౌడర్"
+        }
+      }
+    ],
+    "steps": [
+      {
+        "stepNumber": 1,
+        "instruction": {
+          "en": "Brew 60ml of concentrated, aromatic coffee decoction using freshly ground South Indian blend in your drip brass filter.",
+          "te": "సాంప్రదాయ కాఫీ ఫిల్టర్‌లో 60మిల్లీ చిక్కటి డికాక్షన్ తయారు చేసుకోండి."
+        }
+      },
+      {
+        "stepNumber": 2,
+        "instruction": {
+          "en": "In a small saucepan, bring milk to a boil. Lower flame, add finely grated dark chocolate and ground cardamom. Whisk continuously until chocolate dissolves completely.",
+          "te": "గిన్నెలో పాలు మరిగించి, మంట తగ్గించి తురిమిన డార్క్ చాక్లెట్ మరియు యాలకుల పొడి వేసి కరిగే వరకు కలపండి."
+        },
+        "durationMinutes": 3
+      },
+      {
+        "stepNumber": 3,
+        "instruction": {
+          "en": "Stir in the hot coffee decoction and organic jaggery. Simmer for 30 seconds on low flame.",
+          "te": "కాఫీ డికాక్షన్ మరియు బెల్లం వేసి సన్నని మంటపై అర నిమిషం మరిగించండి."
+        }
+      },
+      {
+        "stepNumber": 4,
+        "instruction": {
+          "en": "Pour the piping hot mocha back and forth between brass tumbler and dabarah in wide arcs. Dust with cocoa powder and savor while hot!",
+          "te": "డంబ్లర్, దబరాతో పైకెత్తి పోస్తూ మంచి నురుగు తెప్పించండి. పైన కోకో పౌడర్ చల్లి వేడి వేడిగా తాగండి!"
+        }
+      }
+    ]
+  },
+  {
+    "id": "cacao-nib-brittle",
+    "slug": "cacao-nib-brittle",
+    "title": {
+      "en": "Cocoa Nib & Almond Chikki",
+      "te": "కోకో నిబ్ బాదం చిక్కీ"
+    },
+    "tagline": {
+      "en": "Crisp and golden artisanal brittle made with roasted almonds, cocoa nibs & palm jaggery",
+      "te": "వేయించిన బాదం పప్పులు, కరకరలాడే కోకో నిబ్స్ మరియు తాటి బెల్లం పాకంతో చేసిన ఆర్గానిక్ చిక్కీ"
+    },
+    "description": {
+      "en": "The classic winter street treat elevated into an artisanal confection. Golden palm jaggery is boiled to a hard-crack caramel, folded with roasted crunchy cacao nibs and sliced almonds, and rolled thin into glossy, snappy shards with sea salt.",
+      "te": "బాదం పప్పులు, చేదు-తీపి కోకో నిబ్స్ మరియు తాటి బెల్లం పాకం సమ్మేళనం. ఎలాంటి కృత్రిమ రంగులు లేకుండా చేసే ఆరోగ్యకరమైన, కరకరలాడే విలాసవంతమైన చిక్కీ."
+    },
+    "category": "healthy",
+    "categoryLabel": {
+      "en": "Healthy & Fresh",
+      "te": "ఆరోగ్యకరమైనవి"
+    },
+    "difficulty": "medium",
+    "difficultyLabel": {
+      "en": "Medium",
+      "te": "మధ్యస్థం"
+    },
+    "prepTimeMinutes": 10,
+    "cookTimeMinutes": 15,
+    "totalTimeMinutes": 25,
+    "baseServings": 16,
+    "servingUnit": {
+      "en": "squares",
+      "te": "ముక్కలు"
+    },
+    "caloriesPerServing": 110,
+    "image": "/recipes/cacao-nib-brittle.jpg",
+    "tags": {
+      "en": [
+        "Crunchy Snack",
+        "Iron & Magnesium",
+        "Palm Jaggery",
+        "Vegan Friendly"
+      ],
+      "te": [
+        "కరకరలాడే స్నాక్",
+        "ఐరన్ పుష్కలం",
+        "తాటి బెల్లం",
+        "వీగన్"
+      ]
+    },
+    "cacaoProfile": {
+      "en": "Crunchy, roasted earthy cacao nibs providing pleasant bitterness against sweet caramel jaggery",
+      "te": "తీపి బెల్లం పాకానికి చేదు-తీపి నిబ్స్ క్రంచీ బ్యాలెన్స్"
+    },
+    "mascotTip": {
+      "en": "Drop a tiny spoonful of jaggery syrup into a cup of cold water; when it hardens instantly into a brittle ball that snaps like glass, the syrup is ready!",
+      "te": "బెల్లం పాకాన్ని చల్లని నీళ్లలో వేసినప్పుడు అది రాయిలా మారి టక్కున విరిగితే పాకం పర్ఫెక్ట్ గా వచ్చినట్లు!"
+    },
+    "isVegan": true,
+    "isGlutenFree": true,
+    "isJaggerySweetened": true,
+    "ingredients": [
+      {
+        "id": "almonds-chikki",
+        "amount": 120,
+        "unit": "g",
+        "name": {
+          "en": "Raw Almonds",
+          "te": "బాదం పప్పులు"
+        },
+        "note": {
+          "en": "lightly roasted and halved",
+          "te": "దోరగా వేయించి సగానికి తరిగినవి"
+        }
+      },
+      {
+        "id": "nibs-chikki",
+        "amount": 60,
+        "unit": "g",
+        "name": {
+          "en": "Roasted Farm Cacao Nibs",
+          "te": "వేయించిన కోకో నిబ్స్"
+        }
+      },
+      {
+        "id": "jaggery-chikki",
+        "amount": 180,
+        "unit": "g",
+        "name": {
+          "en": "Organic Palm Jaggery",
+          "te": "సేంద్రీయ తాటి బెల్లం"
+        }
+      },
+      {
+        "id": "ghee-chikki",
+        "amount": 1,
+        "unit": "tbsp",
+        "name": {
+          "en": "Ghee (or Coconut Oil for Vegan)",
+          "te": "నెయ్యి (లేదా కొబ్బరి నూనె)"
+        }
+      },
+      {
+        "id": "sea-salt",
+        "amount": 0.5,
+        "unit": "tsp",
+        "name": {
+          "en": "Sea Salt Flakes",
+          "te": "సముద్రపు ఉప్పు పలుకులు"
+        }
+      },
+      {
+        "id": "baking-soda",
+        "amount": 0.25,
+        "unit": "tsp",
+        "name": {
+          "en": "Baking Soda",
+          "te": "వంట సోడా"
+        },
+        "note": {
+          "en": "for airy crunch",
+          "te": "ఎక్కువ గుల్లగా రావడానికి"
+        }
+      }
+    ],
+    "steps": [
+      {
+        "stepNumber": 1,
+        "instruction": {
+          "en": "Grease a marble board or parchment-lined baking tray with ghee or coconut oil. Grease a rolling pin as well.",
+          "te": "ఒక ప్లేట్ లేదా పార్చ్‌మెంట్ పేపర్‌కి మరియు రోలింగ్ పిన్‌కి కొద్దిగా నెయ్యి రాసి సిద్ధం చేసుకోండి."
+        }
+      },
+      {
+        "stepNumber": 2,
+        "instruction": {
+          "en": "In a heavy-bottomed kadai, melt jaggery with 2 tablespoons of water over medium heat. Simmer stirring continuously until it deepens in color and reaches the hard crack stage (149°C / 300°F).",
+          "te": "కడాయిలో బెల్లం, 2 చెంచాల నీళ్లు పోసి కలపండి. పాకం ముదిరి రంగు మారే వరకు మరిగించండి."
+        },
+        "durationMinutes": 8
+      },
+      {
+        "stepNumber": 3,
+        "instruction": {
+          "en": "Quickly stir in baking soda (syrup will foam up aerating the candy), followed by ghee, sea salt, roasted almonds, and cocoa nibs.",
+          "te": "వెంటనే వంట సోడా, నెయ్యి, ఉప్పు, వేయించిన బాదం మరియు కోకో నిబ్స్ వేసి వేగంగా కలపండి."
+        }
+      },
+      {
+        "stepNumber": 4,
+        "instruction": {
+          "en": "Pour immediately onto the greased parchment. Swiftly roll flat with the greased rolling pin to 5mm thickness.",
+          "te": "వెంటనే నెయ్యి రాసిన పేపర్ పై పోసి, చపాతీ కర్రతో పల్చగా రోల్ చేయండి."
+        }
+      },
+      {
+        "stepNumber": 5,
+        "instruction": {
+          "en": "Score into neat square diamonds with a sharp knife while still warm. Let cool for 15 minutes until snap-crackly and crisp!",
+          "te": "గోరువెచ్చగా ఉన్నప్పుడే కత్తితో గాట్లు పెట్టండి. 15 నిమిషాలు చల్లారాక కరకరలాడే చిక్కీ రెడీ!"
+        },
+        "durationMinutes": 15
+      }
+    ]
+  }
+]
