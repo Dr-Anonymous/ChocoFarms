@@ -182,7 +182,7 @@ export const AdminRecipes: React.FC = () => {
               className="flex items-center gap-1.5 text-xs font-semibold text-muted-foreground hover:text-amber-950 dark:hover:text-amber-200 transition-colors"
             >
               <ArrowLeft className="w-4 h-4" />
-              <span>{lang === "te" ? "← వంటల పుస్తకానికి తిరిగి వెళ్లండి" : "← Back to Cookbook"}</span>
+              <span>{lang === "te" ? "వంటల పుస్తకానికి తిరిగి వెళ్లండి" : "Back to Cookbook"}</span>
             </Link>
             <button
               onClick={() => {
@@ -484,11 +484,10 @@ export const AdminRecipes: React.FC = () => {
                   soundManager.playClick();
                   setSelectedCategory(cat);
                 }}
-                className={`px-3 py-1.5 rounded-xl text-xs font-semibold capitalize transition-all ${
-                  selectedCategory === cat
+                className={`px-3 py-1.5 rounded-xl text-xs font-semibold capitalize transition-all ${selectedCategory === cat
                     ? "bg-amber-900 text-amber-50 shadow-xs"
                     : "bg-muted/70 text-muted-foreground hover:bg-muted hover:text-foreground"
-                }`}
+                  }`}
               >
                 {cat}
               </button>
