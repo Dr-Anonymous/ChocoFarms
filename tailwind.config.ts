@@ -13,6 +13,11 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['"Outfit"', '"Noto Sans Telugu"', '"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+        telugu: ['"Noto Sans Telugu"', 'sans-serif'],
+        heading: ['"Outfit"', '"Noto Sans Telugu"', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
