@@ -1,5 +1,110 @@
 [
   {
+    "id": "farm-1791135328846-test",
+    "slug": "farm-1791135328846-test",
+    "title": {
+      "en": "test",
+      "te": "test"
+    },
+    "tagline": {
+      "en": "some",
+      "te": "so,e"
+    },
+    "description": {
+      "en": "story",
+      "te": "story"
+    },
+    "category": "sweets",
+    "categoryLabel": {
+      "en": "Sweet Treats",
+      "te": "తీపి వంటకాలు"
+    },
+    "difficulty": "easy",
+    "difficultyLabel": {
+      "en": "Easy",
+      "te": "సులభం"
+    },
+    "prepTimeMinutes": 10,
+    "cookTimeMinutes": 15,
+    "totalTimeMinutes": 25,
+    "baseServings": 4,
+    "servingUnit": {
+      "en": "servings",
+      "te": "మందికి"
+    },
+    "caloriesPerServing": 180,
+    "image": "/recipes/artisan-hot-cocoa.jpg",
+    "tags": {
+      "en": [
+        "Farm Crafted",
+        "Gluten-Free",
+        "Palm Jaggery"
+      ],
+      "te": [
+        "ఫామ్ స్పెషల్",
+        "గ్లూటెన్ రహితం",
+        "సేంద్రీయ బెల్లం"
+      ]
+    },
+    "cacaoProfile": {
+      "en": "Single-origin 70% dark farm cocoa",
+      "te": "స్వచ్ఛమైన ఫామ్ కోకో"
+    },
+    "mascotTip": {
+      "en": "Always use fresh ingredients and gentle heat for the richest chocolate aroma!",
+      "te": "మంచి చాక్లెట్ సువాసన కోసం సన్నని మంటపై వేడి చేయండి!"
+    },
+    "isVegan": false,
+    "isGlutenFree": true,
+    "isJaggerySweetened": true,
+    "ingredients": [
+      {
+        "id": "ing-1",
+        "amount": 50,
+        "unit": "g",
+        "name": {
+          "en": "Farm Cocoa Powder",
+          "te": "ఫామ్ కోకో పౌడర్"
+        }
+      },
+      {
+        "id": "ing-2",
+        "amount": 100,
+        "unit": "g",
+        "name": {
+          "en": "Organic Palm Jaggery",
+          "te": "సేంద్రీయ తాటి బెల్లం"
+        },
+        "note": {
+          "en": "powdered",
+          "te": "powdered"
+        }
+      }
+    ],
+    "steps": [
+      {
+        "stepNumber": 1,
+        "instruction": {
+          "en": "Whisk the dry cocoa powder and powdered jaggery together until thoroughly blended.",
+          "te": "కోకో పౌడర్ మరియు బెల్లం పొడిని సమానంగా కలపండి."
+        },
+        "durationMinutes": 2,
+        "tip": {
+          "en": "Sift first to avoid lumps",
+          "te": "Sift first to avoid lumps"
+        }
+      },
+      {
+        "stepNumber": 2,
+        "instruction": {
+          "en": "Gently fold in wet ingredients on low heat until glossy and fragrant.",
+          "te": "సన్నని మంటపై ఇతర పదార్థాలు కలిపి మెత్తగా అయ్యే వరకు తిప్పండి."
+        },
+        "durationMinutes": 5
+      }
+    ]
+  },
+  {
     "id": "artisan-spiced-hot-cocoa",
     "slug": "artisan-spiced-hot-cocoa",
     "title": {
