@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Recipe, RecipeCategory, RecipeDifficulty } from "@/data/recipes";
 import { useLanguage } from "@/context/LanguageContext";
 import { useRecipes } from "@/context/RecipeContext";
@@ -10,11 +10,11 @@ import {
   Upload,
   ChefHat,
   Sparkles,
-  Camera,
   Check,
   Clock,
   Users,
   Flame,
+  Loader2,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -25,6 +25,7 @@ interface AddRecipeModalProps {
   isOpen: boolean;
   onClose: () => void;
   onRecipeAdded?: (recipeId: string) => void;
+  initialRecipe?: Recipe | null;
 }
 
 const PRESET_PHOTOS = [
@@ -40,11 +41,14 @@ export const AddRecipeModal: React.FC<AddRecipeModalProps> = ({
   isOpen,
   onClose,
   onRecipeAdded,
+  initialRecipe = null,
 }) => {
   const { lang, t } = useLanguage();
-  const { addRecipe } = useRecipes();
+  const { addRecipe, updateRecipe, isPublishing } = useRecipes();
 
+  const isEditing = Boolean(initialRecipe);
   const [activeTab, setActiveTab] = useState<"basic" | "ingredients" | "extras">("basic");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   // Basic Info
   const [titleEn, setTitleEn] = useState("");
@@ -64,12 +68,11 @@ export const AddRecipeModal: React.FC<AddRecipeModalProps> = ({
 
   // Photo
   const [selectedPhoto, setSelectedPhoto] = useState<string>(PRESET_PHOTOS[0].path);
-  const [customPhotoData, setCustomPhotoData] = useState<string>("");
 
   // Extras
   const [cacaoProfileEn, setCacaoProfileEn] = useState("Single-origin 70% dark farm cocoa");
   const [cacaoProfileTe, setCacaoProfileTe] = useState("స్వచ్ఛమైన ఫామ్ కోకో");
-  const [mascotTipEn, setMascotTipEn] = useState("Always use fresh ingredients and slow heat for the richest chocolate aroma!");
+  const [mascotTipEn, setMascotTipEn] = useState("Always use fresh ingredients and gentle heat for the richest chocolate aroma!");
   const [mascotTipTe, setMascotTipTe] = useState("మంచి చాక్లెట్ సువాసన కోసం సన్నని మంటపై వేడి చేయండి!");
   const [isVegan, setIsVegan] = useState(false);
   const [isGlutenFree, setIsGlutenFree] = useState(true);
@@ -103,6 +106,100 @@ export const AddRecipeModal: React.FC<AddRecipeModalProps> = ({
     },
   ]);
 
+  // Sync state when opening with an initial recipe (edit mode) or reset
+  useEffect(() => {
+    if (isOpen) {
+      if (initialRecipe) {
+        setTitleEn(initialRecipe.title.en);
+        setTitleTe(initialRecipe.title.te);
+        setTaglineEn(initialRecipe.tagline?.en || "");
+        setTaglineTe(initialRecipe.tagline?.te || "");
+        setDescriptionEn(initialRecipe.description.en);
+        setDescriptionTe(initialRecipe.description.te);
+        setCategory(initialRecipe.category);
+        setDifficulty(initialRecipe.difficulty);
+        setPrepTime(initialRecipe.prepTimeMinutes);
+        setCookTime(initialRecipe.cookTimeMinutes);
+        setBaseServings(initialRecipe.baseServings);
+        setServingUnitEn(initialRecipe.servingUnit.en);
+        setServingUnitTe(initialRecipe.servingUnit.te);
+        setCalories(initialRecipe.caloriesPerServing || 180);
+        setSelectedPhoto(initialRecipe.image);
+        setCacaoProfileEn(initialRecipe.cacaoProfile?.en || "");
+        setCacaoProfileTe(initialRecipe.cacaoProfile?.te || "");
+        setMascotTipEn(initialRecipe.mascotTip?.en || "");
+        setMascotTipTe(initialRecipe.mascotTip?.te || "");
+        setIsVegan(Boolean(initialRecipe.isVegan));
+        setIsGlutenFree(Boolean(initialRecipe.isGlutenFree));
+        setIsJaggerySweetened(Boolean(initialRecipe.isJaggerySweetened));
+        setIngredients(
+          initialRecipe.ingredients.map((ing) => ({
+            id: ing.id,
+            amount: ing.amount,
+            unit: ing.unit,
+            nameEn: ing.name.en,
+            nameTe: ing.name.te,
+            note: ing.note?.en || "",
+          }))
+        );
+        setSteps(
+          initialRecipe.steps.map((s) => ({
+            stepNumber: s.stepNumber,
+            instructionEn: s.instruction.en,
+            instructionTe: s.instruction.te,
+            durationMinutes: s.durationMinutes || 0,
+            tip: s.tip?.en || "",
+          }))
+        );
+      } else {
+        // Reset defaults for new recipe
+        setTitleEn("");
+        setTitleTe("");
+        setTaglineEn("");
+        setTaglineTe("");
+        setDescriptionEn("");
+        setDescriptionTe("");
+        setCategory("sweets");
+        setDifficulty("easy");
+        setPrepTime(10);
+        setCookTime(15);
+        setBaseServings(4);
+        setServingUnitEn("servings");
+        setServingUnitTe("మందికి");
+        setCalories(180);
+        setSelectedPhoto(PRESET_PHOTOS[0].path);
+        setCacaoProfileEn("Single-origin 70% dark farm cocoa");
+        setCacaoProfileTe("స్వచ్ఛమైన ఫామ్ కోకో");
+        setMascotTipEn("Always use fresh ingredients and gentle heat for the richest chocolate aroma!");
+        setMascotTipTe("మంచి చాక్లెట్ సువాసన కోసం సన్నని మంటపై వేడి చేయండి!");
+        setIsVegan(false);
+        setIsGlutenFree(true);
+        setIsJaggerySweetened(true);
+        setIngredients([
+          { id: "ing-1", amount: 50, unit: "g", nameEn: "Farm Cocoa Powder", nameTe: "ఫామ్ కోకో పౌడర్", note: "" },
+          { id: "ing-2", amount: 100, unit: "g", nameEn: "Organic Palm Jaggery", nameTe: "సేంద్రీయ తాటి బెల్లం", note: "powdered" },
+        ]);
+        setSteps([
+          {
+            stepNumber: 1,
+            instructionEn: "Whisk the dry cocoa powder and powdered jaggery together until thoroughly blended.",
+            instructionTe: "కోకో పౌడర్ మరియు బెల్లం పొడిని సమానంగా కలపండి.",
+            durationMinutes: 2,
+            tip: "Sift first to avoid lumps",
+          },
+          {
+            stepNumber: 2,
+            instructionEn: "Gently fold in wet ingredients on low heat until glossy and fragrant.",
+            instructionTe: "సన్నని మంటపై ఇతర పదార్థాలు కలిపి మెత్తగా అయ్యే వరకు తిప్పండి.",
+            durationMinutes: 5,
+            tip: "",
+          },
+        ]);
+      }
+      setActiveTab("basic");
+    }
+  }, [isOpen, initialRecipe]);
+
   if (!isOpen) return null;
 
   // Handle image upload with auto-downscale
@@ -123,7 +220,6 @@ export const AddRecipeModal: React.FC<AddRecipeModalProps> = ({
         if (ctx) {
           ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
           const dataUrl = canvas.toDataURL("image/jpeg", 0.85);
-          setCustomPhotoData(dataUrl);
           setSelectedPhoto(dataUrl);
           soundManager.playChime(660);
           toast.success("Photo uploaded successfully!");
@@ -175,12 +271,11 @@ export const AddRecipeModal: React.FC<AddRecipeModalProps> = ({
     soundManager.playClick();
     if (steps.length <= 1) return;
     const filtered = steps.filter((s) => s.stepNumber !== stepNum);
-    // Renumber steps
     const renumbered = filtered.map((s, idx) => ({ ...s, stepNumber: idx + 1 }));
     setSteps(renumbered);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     if (!titleEn.trim()) {
@@ -203,7 +298,7 @@ export const AddRecipeModal: React.FC<AddRecipeModalProps> = ({
       return;
     }
 
-    const recipeId = `custom-${Date.now()}-${titleEn
+    const recipeId = `farm-${Date.now()}-${titleEn
       .toLowerCase()
       .replace(/[^a-z0-9]+/g, "-")
       .slice(0, 24)}`;
@@ -305,27 +400,69 @@ export const AddRecipeModal: React.FC<AddRecipeModalProps> = ({
         })),
     };
 
-    addRecipe(newRecipe);
-    toast.success(t.addRecipe.successToast);
-    if (onRecipeAdded) onRecipeAdded(newRecipe.id);
+    setIsSubmitting(true);
+    let result;
+    if (isEditing && initialRecipe) {
+      const updated: Recipe = {
+        ...newRecipe,
+        id: initialRecipe.id,
+        slug: initialRecipe.slug,
+      };
+      result = await updateRecipe(updated, { publishToGitHub: true });
+      setIsSubmitting(false);
+
+      if (result.githubPublished) {
+        toast.success(
+          lang === "te"
+            ? "🎉 రెసిపీ విజయవంతంగా అప్‌డేట్ చేయబడింది! అందరికీ కనిపిస్తుంది."
+            : "🎉 Recipe updated and published to GitHub! Live for all visitors."
+        );
+      } else {
+        toast.success(lang === "te" ? "రెసిపీ అప్‌డేట్ చేయబడింది!" : "Recipe updated successfully!");
+      }
+      if (onRecipeAdded) onRecipeAdded(initialRecipe.id);
+    } else {
+      result = await addRecipe(newRecipe, { publishToGitHub: true });
+      setIsSubmitting(false);
+
+      if (result.githubPublished) {
+        toast.success(
+          lang === "te"
+            ? "🎉 కొత్త రెసిపీ పబ్లిష్ చేయబడింది! అందరికీ కనిపిస్తుంది."
+            : "🎉 Recipe published successfully! Live for all visitors worldwide."
+        );
+      } else {
+        toast.success(t.addRecipe.successToast);
+      }
+      if (onRecipeAdded) onRecipeAdded(newRecipe.id);
+    }
+
     onClose();
   };
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md p-3 sm:p-6 animate-in fade-in duration-200">
       <div className="relative flex flex-col w-full max-w-3xl h-[92vh] max-h-[820px] rounded-3xl bg-background border border-amber-900/30 shadow-2xl overflow-hidden">
-        {/* Header */}
+        {/* Clean Header - NO technical jargon */}
         <div className="flex items-center justify-between border-b border-border/70 px-6 py-4 bg-muted/40">
           <div className="flex items-center gap-3">
-            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-amber-900 text-amber-50">
+            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-amber-900 text-amber-50 shadow-xs">
               <ChefHat className="h-5 w-5" />
             </div>
             <div>
               <h3 className="text-base font-bold text-foreground">
-                {t.addRecipe.modalTitle}
+                {isEditing
+                  ? lang === "te"
+                    ? "రెసిపీని సవరించండి"
+                    : "Edit Farm Recipe"
+                  : t.addRecipe.modalTitle}
               </h3>
               <p className="text-xs text-muted-foreground">
-                {t.addRecipe.modalSubtitle}
+                {isEditing
+                  ? lang === "te"
+                    ? "వివరాలు మరియు పదార్థాలను మార్చండి"
+                    : "Update ingredients, cooking steps, and notes"
+                  : t.addRecipe.modalSubtitle}
               </p>
             </div>
           </div>
@@ -596,7 +733,7 @@ export const AddRecipeModal: React.FC<AddRecipeModalProps> = ({
                 </div>
 
                 <div className="space-y-2">
-                  {ingredients.map((ing, idx) => (
+                  {ingredients.map((ing) => (
                     <div
                       key={ing.id}
                       className="flex items-center gap-2 bg-muted/40 p-2 rounded-xl border border-border/60"
@@ -913,6 +1050,7 @@ export const AddRecipeModal: React.FC<AddRecipeModalProps> = ({
                   soundManager.playClick();
                   onClose();
                 }}
+                disabled={isSubmitting || isPublishing}
                 className="rounded-xl text-xs"
               >
                 {t.addRecipe.cancelBtn}
@@ -920,9 +1058,23 @@ export const AddRecipeModal: React.FC<AddRecipeModalProps> = ({
               <Button
                 type="submit"
                 size="sm"
-                className="rounded-xl bg-amber-900 hover:bg-amber-800 text-amber-50 font-bold text-xs px-5 shadow-sm"
+                disabled={isSubmitting || isPublishing}
+                className="rounded-xl bg-amber-900 hover:bg-amber-800 text-amber-50 font-bold text-xs px-5 shadow-sm gap-1.5"
               >
-                {t.addRecipe.saveBtn}
+                {isSubmitting || isPublishing ? (
+                  <>
+                    <Loader2 className="w-3.5 h-3.5 animate-spin" />
+                    <span>Saving...</span>
+                  </>
+                ) : (
+                  <span>
+                    {isEditing
+                      ? lang === "te"
+                        ? "మార్పులను సేవ్ చేయండి"
+                        : "Update Recipe"
+                      : t.addRecipe.saveBtn}
+                  </span>
+                )}
               </Button>
             </div>
           </div>

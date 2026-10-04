@@ -83,6 +83,8 @@ ChocoFarms/
 | `/cook` | `Cookbook.tsx` | Main cookbook page with search, category tabs, dietary filters, and recipe grid. |
 | `/cookbook` | Redirect | Automatically redirects to `/cook`. |
 | `/cook/:recipeId` | `RecipeDetail.tsx` | Individual recipe view with dynamic servings scaler, checklist, timer, print, and cook mode. |
+| `/admin` | `AdminRecipes.tsx` | Admin Recipe Studio: manage, add, edit, and delete recipes with direct sync to GitHub. |
+| `/cook/admin` | Redirect | Automatically redirects to `/admin`. |
 | `*` | `NotFound.tsx` | 404 page for unmatched routes. |
 
 ---
@@ -126,18 +128,26 @@ ChocoFarms/
 - `@media print` styles in `src/index.css` automatically hide navigation bars, buttons, and headers when printing.
 - Clicking the "Print Recipe Card" button generates a clean, readable hardcopy suitable for kitchens.
 
-### G. Custom Recipe Creation & Local Storage
-- **Context & Hook**: `RecipeProvider` / `useRecipes()` (`src/context/RecipeContext.tsx`).
-- **Creation Modal**: `src/components/cookbook/AddRecipeModal.tsx`.
-- **Features**:
-  - Interactive multi-tab creation wizard: *Basic Details*, *Ingredients & Steps*, *Photo & Notes*.
-  - Bilingual fields (English + optional Telugu).
-  - Dynamic ingredient builder (+/- ingredients, custom amounts and units).
-  - Dynamic step builder with optional countdown timers for individual steps.
-  - Image selection: Client-side photo upload (auto-downscaled to ~800px) or 6 curated farm cocoa preset photos.
-  - Custom recipes are saved in `localStorage` under `chocofarms_custom_recipes`.
-  - Badged with a "Community Recipe" / "మీ స్వంత రెసిపీ" tag and equipped with a delete button.
-  - Seamlessly integrates with search, category filters, serving scalers, pantry checklists, and Chef Cook Mode.
+### G. Admin Recipe Studio & Direct GitHub Storage (Zero-DB Architecture)
+- **Concept**: Following the serverless GitHub file pattern (similar to OrthoLife), recipes are stored as a version-controlled JSON database in [`public/recipes-data.json`](file:///Users/manoj/Documents/GitHub/ChocoFarms/public/recipes-data.json) directly in the `Dr-Anonymous/ChocoFarms` repository.
+- **Client Fetching**:
+  - The client automatically checks `https://raw.githubusercontent.com/Dr-Anonymous/ChocoFarms/main/public/recipes-data.json?t=<timestamp>` on startup.
+  - Any recipe added or edited by the admin is immediately served to all visitors worldwide without redeploying or needing a backend database.
+- **Dedicated Admin Page (`/admin`)**:
+  - Located at [`src/pages/AdminRecipes.tsx`](file:///Users/manoj/Documents/GitHub/ChocoFarms/src/pages/AdminRecipes.tsx) (`/admin`, `/cook/admin`).
+  - Regular visitors on `/cook` never see technical git details, branch names, or upload buttons.
+  - Dashboard includes search, category filters, recipe status, view live, edit, delete, and manual GitHub sync.
+- **Cross-Device Token Persistence (No Prompts on Every Device)**:
+  - Configuration file: [`src/config/admin.ts`](file:///Users/manoj/Documents/GitHub/ChocoFarms/src/config/admin.ts).
+  - Storing the GitHub Personal Access Token (PAT with `repo` scope) in `src/config/admin.ts` (`githubToken`) or `VITE_GITHUB_TOKEN` allows any device (phone, laptop, tablet) accessing `/admin` to add, edit, and delete recipes immediately without logging in or entering credentials each time.
+- **Admin Direct Commits**:
+  - Module: [`src/lib/githubStorage.ts`](file:///Users/manoj/Documents/GitHub/ChocoFarms/src/lib/githubStorage.ts).
+  - When saving, editing, or deleting a recipe, the frontend fetches the current SHA of `public/recipes-data.json`, base64 encodes the UTF-8 content, and sends a `PUT` request to GitHub's Contents API (`https://api.github.com/repos/Dr-Anonymous/ChocoFarms/contents/public/recipes-data.json`).
+- **Admin Password Protection**:
+  - The admin route is protected by a password lock screen.
+  - The password is configurable in [`src/config/admin.ts`](file:///Users/manoj/Documents/GitHub/ChocoFarms/src/config/admin.ts) (`adminPassword`) or via `VITE_ADMIN_PASSWORD` (default: `chocofarms2026`).
+  - Active sessions are remembered in `sessionStorage` (`chocofarms_admin_authenticated`) with a manual "Lock" button in the header.
+- **Creation & Edit Modal**: [`src/components/cookbook/AddRecipeModal.tsx`](file:///Users/manoj/Documents/GitHub/ChocoFarms/src/components/cookbook/AddRecipeModal.tsx) supports both creating new recipes and editing existing ones.
 
 ---
 

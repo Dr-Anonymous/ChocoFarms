@@ -8,6 +8,7 @@ import { RecipeProvider } from "@/context/RecipeContext";
 import Index from "./pages/Index";
 import { Cookbook } from "./pages/Cookbook";
 import { RecipeDetail } from "./pages/RecipeDetail";
+import { AdminRecipes } from "./pages/AdminRecipes";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,6 +26,8 @@ const App = () => (
               <Route path="/cook" element={<Cookbook />} />
               <Route path="/cookbook" element={<Navigate to="/cook" replace />} />
               <Route path="/cook/:recipeId" element={<RecipeDetail />} />
+              <Route path="/admin" element={<AdminRecipes />} />
+              <Route path="/cook/admin" element={<Navigate to="/admin" replace />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>

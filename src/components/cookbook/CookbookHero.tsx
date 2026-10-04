@@ -1,20 +1,17 @@
 import React from "react";
 import { useLanguage } from "@/context/LanguageContext";
-import { Search, Sparkles, ChefHat, Leaf, Flame, Plus } from "lucide-react";
+import { Search, Sparkles, ChefHat, Leaf, Flame } from "lucide-react";
 import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
 import { soundManager } from "@/lib/soundEffects";
 
 interface CookbookHeroProps {
   searchQuery: string;
   onSearchChange: (q: string) => void;
-  onOpenAddRecipe?: () => void;
 }
 
 export const CookbookHero: React.FC<CookbookHeroProps> = ({
   searchQuery,
   onSearchChange,
-  onOpenAddRecipe,
 }) => {
   const { lang, t } = useLanguage();
 
@@ -80,19 +77,6 @@ export const CookbookHero: React.FC<CookbookHeroProps> = ({
                   </button>
                 )}
               </div>
-
-              {onOpenAddRecipe && (
-                <Button
-                  onClick={() => {
-                    soundManager.playChime(660);
-                    onOpenAddRecipe();
-                  }}
-                  className="h-12 rounded-2xl bg-amber-900 hover:bg-amber-800 text-amber-50 text-xs sm:text-sm font-bold gap-2 px-4 shadow-sm shrink-0"
-                >
-                  <Plus className="w-4 h-4 text-amber-300" />
-                  <span>{t.addRecipe.btn}</span>
-                </Button>
-              )}
             </div>
           </div>
 

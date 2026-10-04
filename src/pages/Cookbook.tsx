@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams, Link } from "react-router-dom";
 import { Recipe, RecipeCategory } from "@/data/recipes";
 import { useLanguage } from "@/context/LanguageContext";
 import { useFavorites } from "@/hooks/useFavorites";
@@ -10,9 +10,8 @@ import { CookbookHero } from "@/components/cookbook/CookbookHero";
 import { RecipeFilters, DietaryFilter } from "@/components/cookbook/RecipeFilters";
 import { RecipeCard } from "@/components/cookbook/RecipeCard";
 import { ChefCookModeModal } from "@/components/cookbook/ChefCookModeModal";
-import { AddRecipeModal } from "@/components/cookbook/AddRecipeModal";
 import { Button } from "@/components/ui/button";
-import { Sparkles, UtensilsCrossed, Heart, PlusCircle } from "lucide-react";
+import { Sparkles, UtensilsCrossed, Heart } from "lucide-react";
 
 export const Cookbook: React.FC = () => {
   const { lang, t } = useLanguage();
@@ -23,7 +22,6 @@ export const Cookbook: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<RecipeCategory | "all">("all");
   const [selectedDietary, setSelectedDietary] = useState<DietaryFilter>("all");
-  const [addRecipeOpen, setAddRecipeOpen] = useState(false);
 
   // Check if URL specifies favorites filter e.g. /cook?filter=favorites
   const showFavoritesOnly = searchParams.get("filter") === "favorites";
@@ -79,7 +77,7 @@ export const Cookbook: React.FC = () => {
 
       return true;
     });
-  }, [recipes, searchQuery, selectedCategory, selectedDietary, showFavoritesOnly, favorites]);
+  }, [recipes, searchQuery, selectedCategory, selectedDietary, showFavoritesOnly, favorites, isFavorite]);
 
   const handleResetFilters = () => {
     soundManager.playClick();
@@ -91,13 +89,12 @@ export const Cookbook: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-background flex flex-col font-sans">
-      <CookbookNavbar onOpenAddRecipe={() => setAddRecipeOpen(true)} />
+      <CookbookNavbar />
 
       {/* Hero Section */}
       <CookbookHero
         searchQuery={searchQuery}
         onSearchChange={setSearchQuery}
-        onOpenAddRecipe={() => setAddRecipeOpen(true)}
       />
 
       {/* Main Content Area */}
@@ -169,14 +166,6 @@ export const Cookbook: React.FC = () => {
               >
                 {t.filter.resetFilters}
               </Button>
-              <Button
-                size="sm"
-                onClick={() => setAddRecipeOpen(true)}
-                className="rounded-xl bg-amber-900 hover:bg-amber-800 text-amber-50 text-xs font-semibold gap-1.5"
-              >
-                <PlusCircle className="w-3.5 h-3.5" />
-                <span>{t.addRecipe.btn}</span>
-              </Button>
             </div>
           </div>
         )}
@@ -187,33 +176,23 @@ export const Cookbook: React.FC = () => {
             <div className="sm:col-span-8 space-y-2">
               <div className="inline-flex items-center gap-1.5 rounded-full bg-amber-800/60 px-3 py-0.5 text-[11px] font-semibold text-amber-200">
                 <Sparkles className="w-3 h-3 text-amber-300" />
-                <span>{lang === "te" ? "ఫామ్-టు-టేబుల్ మ్యాజిక్" : "Farm-to-Table Magic"}</span>
+                <span>{lang === "te" ? "ఫామ్-టు-టేబుల్ అనుభవం" : "Farm-to-Table Experience"}</span>
               </div>
               <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-white">
                 {lang === "te"
-                  ? "మీ స్వంత కోకో రెసిపీని పంచుకోవాలనుకుంటున్నారా?"
-                  : "Have a unique cocoa recipe of your own?"}
+                  ? "చాకోఫార్మ్స్ లో సరికొత్త కోకో రుచులను ఆస్వాదించండి"
+                  : "Experience Fresh Cocoa Farm Life"}
               </h3>
               <p className="text-xs sm:text-sm text-amber-200/80 leading-relaxed max-w-xl">
                 {lang === "te"
-                  ? "మా చాకోఫార్మ్స్ చెఫ్స్ తో మాట్లాడండి లేదా మీ వినూత్న చాక్లెట్ వంటకాన్ని డైరెక్ట్ గా మా వంటల పుస్తకంలో నమోదు చేయండి!"
-                  : "Add your handcrafted cocoa recipes right here into the cookbook or connect with our staycation cocoa farmers!"}
+                  ? "ఆర్గానిక్ కోకో తోటల్లో నడక, స్వచ్ఛమైన కోకో గింజల ప్రాసెసింగ్ మరియు సహజసిద్ధమైన చాక్లెట్ తయారీని ప్రత్యక్షంగా వీక్షించండి."
+                  : "Book orchard walks, artisanal cacao tastings, and hands-on roasting workshops with our master growers."}
               </p>
             </div>
             <div className="sm:col-span-4 flex flex-col sm:flex-row gap-2 justify-end">
               <Button
-                onClick={() => {
-                  soundManager.playChime(660);
-                  setAddRecipeOpen(true);
-                }}
-                className="rounded-2xl bg-amber-700 hover:bg-amber-600 text-white font-bold text-xs sm:text-sm px-4 py-6 shadow-md gap-1.5"
-              >
-                <PlusCircle className="w-4 h-4" />
-                <span>{t.addRecipe.btn}</span>
-              </Button>
-              <Button
                 asChild
-                className="rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm px-4 py-6 shadow-md"
+                className="rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm px-6 py-6 shadow-md"
                 onClick={() => soundManager.playChime(660)}
               >
                 <a
@@ -221,7 +200,7 @@ export const Cookbook: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  {lang === "te" ? "వాట్సాప్" : "WhatsApp"}
+                  {lang === "te" ? "వాట్సాప్ లో బుక్ చేయండి" : "Book Farm Stay on WhatsApp"}
                 </a>
               </Button>
             </div>
@@ -229,13 +208,22 @@ export const Cookbook: React.FC = () => {
         </section>
       </main>
 
-      {/* Footer */}
+      {/* Footer with discreet Admin link */}
       <footer className="border-t border-border/60 bg-muted/30 py-6 text-center text-xs text-muted-foreground">
         <div className="container mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
           <span className="flex items-center gap-1.5 font-medium">
             🌱 {t.footer.madeWith}
           </span>
-          <span>{t.footer.rights}</span>
+          <div className="flex items-center gap-4">
+            <span>{t.footer.rights}</span>
+            <span className="text-border">•</span>
+            <Link
+              to="/admin"
+              className="text-muted-foreground/60 hover:text-amber-900 dark:hover:text-amber-300 transition-colors"
+            >
+              Admin Portal
+            </Link>
+          </div>
         </div>
       </footer>
 
@@ -244,12 +232,6 @@ export const Cookbook: React.FC = () => {
         recipe={activeCookRecipe}
         isOpen={Boolean(activeCookRecipe)}
         onClose={() => setActiveCookRecipe(null)}
-      />
-
-      {/* Add Recipe Modal */}
-      <AddRecipeModal
-        isOpen={addRecipeOpen}
-        onClose={() => setAddRecipeOpen(false)}
       />
     </div>
   );

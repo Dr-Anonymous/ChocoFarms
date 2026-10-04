@@ -1,22 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useLanguage } from "@/context/LanguageContext";
 import { soundManager } from "@/lib/soundEffects";
 import { Button } from "@/components/ui/button";
-import { Volume2, VolumeX, Sparkles, BookOpen, Home, Heart, PlusCircle } from "lucide-react";
+import { Volume2, VolumeX, Sparkles, BookOpen, Home, Heart } from "lucide-react";
 import { useFavorites } from "@/hooks/useFavorites";
-import { AddRecipeModal } from "./AddRecipeModal";
 
-interface CookbookNavbarProps {
-  onOpenAddRecipe?: () => void;
-}
-
-export const CookbookNavbar: React.FC<CookbookNavbarProps> = ({ onOpenAddRecipe }) => {
+export const CookbookNavbar: React.FC = () => {
   const { lang, toggleLang, t } = useLanguage();
   const location = useLocation();
   const { favorites } = useFavorites();
   const [muted, setMuted] = React.useState(() => soundManager.getMuted());
-  const [localModalOpen, setLocalModalOpen] = useState(false);
 
   const handleToggleSound = () => {
     const isNowMuted = soundManager.toggleMute();
@@ -24,15 +18,6 @@ export const CookbookNavbar: React.FC<CookbookNavbarProps> = ({ onOpenAddRecipe 
   };
 
   const isCookActive = location.pathname.startsWith("/cook");
-
-  const handleAddClick = () => {
-    soundManager.playChime(660);
-    if (onOpenAddRecipe) {
-      onOpenAddRecipe();
-    } else {
-      setLocalModalOpen(true);
-    }
-  };
 
   return (
     <>
@@ -97,18 +82,8 @@ export const CookbookNavbar: React.FC<CookbookNavbarProps> = ({ onOpenAddRecipe 
             </a>
           </nav>
 
-          {/* Right side controls: Add Recipe, Language, Sound, Favorites */}
+          {/* Right side controls: Language, Sound, Favorites */}
           <div className="flex items-center space-x-2">
-            {/* Add Recipe Button */}
-            <Button
-              size="sm"
-              onClick={handleAddClick}
-              className="rounded-xl bg-amber-900 hover:bg-amber-800 text-amber-50 text-xs font-semibold flex items-center gap-1.5 shadow-2xs px-3"
-            >
-              <PlusCircle className="w-3.5 h-3.5 text-amber-300" />
-              <span className="hidden sm:inline">{t.addRecipe.btn}</span>
-            </Button>
-
             {/* Favorite Indicator */}
             {favorites.length > 0 && (
               <Link
@@ -170,14 +145,6 @@ export const CookbookNavbar: React.FC<CookbookNavbarProps> = ({ onOpenAddRecipe 
           </div>
         </div>
       </header>
-
-      {/* Standalone Add Recipe Modal fallback if not handled by parent */}
-      {!onOpenAddRecipe && (
-        <AddRecipeModal
-          isOpen={localModalOpen}
-          onClose={() => setLocalModalOpen(false)}
-        />
-      )}
     </>
   );
 };
