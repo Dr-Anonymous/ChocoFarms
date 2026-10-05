@@ -403,7 +403,7 @@ export const AdminRecipes: React.FC = () => {
                     Seamless Cross-Device Setup:
                   </p>
                   <p className="text-muted-foreground leading-relaxed">
-                    To upload & edit recipes from <strong>ANY</strong> device (laptop, phone, tablet) without entering passwords, paste your GitHub Personal Access Token into <code className="font-mono bg-background/80 px-1 py-0.5 rounded text-[11px]">src/config/admin.ts</code> (or set <code className="font-mono bg-background/80 px-1 py-0.5 rounded text-[11px]">VITE_GITHUB_TOKEN</code>).
+                    Configure your GitHub Personal Access Token via GitHub Repository Secrets / Variables (<code className="font-mono bg-background/80 px-1 py-0.5 rounded text-[11px]">VITE_GITHUB_TOKEN</code>), your local <code className="font-mono bg-background/80 px-1 py-0.5 rounded text-[11px]">.env</code> file, or enter it directly in this browser below.
                   </p>
                   <div className="pt-1">
                     <button

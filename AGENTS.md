@@ -139,7 +139,7 @@ ChocoFarms/
   - Dashboard includes search, category filters, recipe status, view live, edit, delete, and manual GitHub sync.
 - **Cross-Device Token Persistence (No Prompts on Every Device)**:
   - Configuration file: [`src/config/admin.ts`](file:///Users/manoj/Documents/GitHub/ChocoFarms/src/config/admin.ts).
-  - Storing the GitHub Personal Access Token (PAT with `repo` scope) in `src/config/admin.ts` (`githubToken`) or `VITE_GITHUB_TOKEN` allows any device (phone, laptop, tablet) accessing `/admin` to add, edit, and delete recipes immediately without logging in or entering credentials each time.
+  - Configured via GitHub Actions Secrets/Variables (`VITE_GITHUB_TOKEN`) during deployment or locally via `.env` (gitignored), allowing devices accessing `/admin` to add, edit, and delete recipes immediately without exposing credentials in the public repository. Alternatively, users can enter tokens directly into browser `localStorage`.
 - **Admin Direct Commits**:
   - Module: [`src/lib/githubStorage.ts`](file:///Users/manoj/Documents/GitHub/ChocoFarms/src/lib/githubStorage.ts).
   - When saving, editing, or deleting a recipe, the frontend fetches the current SHA of `public/recipes-data.json`, base64 encodes the UTF-8 content, and sends a `PUT` request to GitHub's Contents API (`https://api.github.com/repos/Dr-Anonymous/ChocoFarms/contents/public/recipes-data.json`).
